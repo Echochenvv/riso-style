@@ -19,6 +19,10 @@
 
 接入生图后端的接口约定见 `SKILL.md` 末尾「接入生图后端」一节——唯一与后端耦合的只有「调模型」那一步,换模型不影响模板。
 
+## Reference Images
+
+`references/bar-images/` 提供 00-08 共 9 张酒吧系列参考图,对应 `examples/prompts.md` 里的实战 prompt。接入支持 reference image / style reference 的生图模型时,可以把这组图作为风格参考；不支持 reference 的模型也可以用它们做人眼校准样本。
+
 ## 文件结构
 
 ```
@@ -26,6 +30,8 @@
 ├── SKILL.md            # skill 定义:风格规范 + prompt 模板 + 工作流
 ├── examples/
 │   └── prompts.md      # 实战验证过的 prompt 速查表(直接复用)
+├── references/
+│   └── bar-images/     # 00-08 酒吧系列风格参考图
 ├── LICENSE             # MIT
 └── README.md
 ```

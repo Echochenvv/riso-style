@@ -97,6 +97,14 @@ Visible paper grain, slight offset misregistration, loose hand-drawn ink lines, 
 > 接入哪个模型由你决定。常见做法:某个文生图 HTTP API、一个 image-generation MCP server、
 > 或本地 Stable Diffusion / ComfyUI。本 skill 不预设端点、不携带任何 key。
 
+### Reference 模块
+
+`references/bar-images/` 提供 00-08 共 9 张酒吧系列参考图,对应 `examples/prompts.md` 里的实战 prompt。
+
+- 如果你的生图后端支持 reference image / style reference,可把这 9 张图作为同一套风格参考输入。
+- 如果后端不支持 reference image,仍可用这组图做人眼校准样本,检查限色、纸纹、套色错位、手绘线条和系列一致性。
+- Reference 图片只提供风格样本,不包含任何模型端点、API key 或调用逻辑。
+
 ### 2. 批量生成(系列图)
 
 并发或串行调用 N 次生图(取决于你的后端是否支持并发),
